@@ -29,7 +29,7 @@ When using `IF_OO_ADT_CLASSRUN`, you **cannot use classic output statements** li
 WRITE: / 'Text', var.
 ULINE.
 SKIP.
-cl_demo_output=>display( data )
+cl_demo_output=>display( data ).
 ```
 
 Instead, use the provided out object to write output to the console:
@@ -40,7 +40,10 @@ METHOD if_oo_adt_classrun~main.
 ENDMETHOD.
 ```
 
-This is the only supported way to print output when using IF_OO_ADT_CLASSRUN.
+### ℹ️ What is out?
+The out parameter is an instance of the system-provided interface IF_OO_ADT_CLASSRUN_OUT, which offers a method WRITE to output strings to the console in Eclipse.
+
+You can think of it as a simple abstraction over the console or log — specifically designed for ADT execution context.
 
 ---
 
