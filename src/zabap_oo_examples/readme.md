@@ -1,52 +1,28 @@
-# ABAP Object-Oriented Examples
+# ABAP OO Practical Examples
 
-This folder contains practical examples of **Object-Oriented Programming in ABAP**, designed to help developers understand and apply ABAP OO concepts in real projects.
+This folder contains **practical code examples** that explore specific ABAP OO techniques and language features.
 
-The examples are sourced from the official [SAP-samples/abap-oo-basics](https://github.com/SAP-samples/abap-oo-basics) repository and organized to provide hands-on learning for developers at all levels.
+## 🔧 Included Examples
 
-## 📘 What's Included
-
-| Example Class | Description |
-|---------------|-------------|
-| `zcl_oo_basics` | Basic class structure and attributes/methods. |
-| `zcl_oo_constructor` | Example of constructor methods and object instantiation. |
-| `zcl_oo_inheritance` | Demonstrates class inheritance and method overriding. |
-| `zcl_oo_polymorphism` | Shows dynamic method binding and polymorphism. |
-| `zcl_oo_interfaces` | Implementation of interfaces and multiple inheritance. |
-| `zcl_oo_events` | Working with ABAP events and event handlers. |
-| `zcl_oo_exceptions` | Using exception classes and TRY-CATCH logic. |
-| `zcl_oo_static_methods` | Static attributes and methods in ABAP classes. |
-| `zcl_oo_visibility` | Access modifiers: public, protected, and private. |
-| `zcl_oo_refactoring` | Clean code techniques and refactoring principles. |
-| `zcl_oo_real_world` | Real-world inspired business object modeling. |
-
-_Note: Folder content and filenames may differ slightly depending on the import method._
+| Topic | Class |
+|-------|-------|
+| Constructor expressions | `zcl_constructor_expression` |
+| Inline declarations | `zcl_inline_declare` |
+| Field-symbol vs reference perf test | `zcl_fs_ref_perf_testing` |
+| Hungarian notation demo | `zcl_hungarian_notation` |
+| JSON: ABAP → JSON | `zcl_abap_to_json`, `zcl_abap_to_json_id` |
+| JSON: JSON → ABAP | `zcl_json_to_abap` |
+| JSON: Restore logic | `zcl_abap_to_json_restore` |
+| JSON → XML converter | `zcl_json_to_xml`, `zcl_json_to_xml_call` |
+| Object/XML serialization test | `zcl_obj_xml_test` |
+| Tutorial classes | `zcl_oo_tutorial_1` → `zcl_oo_tutorial_5` and testers |
 
 ---
 
-## 🛠 How to Use
+## 🧠 Educational Focus
 
-1. Import the classes into your SAP system using **ABAPGit** or manually copy them into your package.
-2. Open the relevant class (`SE24`) and explore the code structure.
-3. Experiment by extending or modifying the examples to reinforce your understanding.
-4. Use the examples as templates in your own ABAP development.
+- Clean and modern ABAP coding practices.
+- Reusable code patterns for real-world usage.
+- Bridging procedural ABAP with OOP concepts.
 
----
-
-## 📚 Recommended Order of Study
-
-If you're new to ABAP OO, we recommend studying the examples in this sequence:
-
-1. Basics (`zcl_oo_basics`)
-2. Constructors and attributes
-3. Inheritance and polymorphism
-4. Interfaces and events
-5. Exceptions and visibility
-6. Static methods
-7. Real-world modeling
-
----
-
-## 📌 Source
-
-These examples are based on the original [SAP-samples/abap-oo-basics](https://github.com/SAP-samples/abap-oo-basics) GitHub repository and have been restructured for integration with other learning materials.
+You can treat each class as an isolated demo or combine them into larger projects.
