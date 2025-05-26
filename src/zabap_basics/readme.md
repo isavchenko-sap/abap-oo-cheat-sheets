@@ -25,77 +25,43 @@ WRITE: / 'Hello, world'.
 
 Use underscores to separate words: `lt_employee_list`
 
-## 🧱 Data Types and Declarations
+## ✍️ Formatting: Spaces and Readability
 
-### Simple Types
+ABAP is whitespace-sensitive in terms of readability and best practices, even if the compiler doesn’t enforce it.
 
-```abap
-DATA lv_text TYPE string.
-DATA lv_count TYPE i.
-DATA lv_flag TYPE abap_bool.
-```
+### ✅ Spaces Around Brackets
 
-### Structured Types
+Always use **spaces** between brackets and their contents:
 
 ```abap
-TYPES: BEGIN OF ty_employee,
-         id   TYPE i,
-         name TYPE string,
-       END OF ty_employee.
-
-DATA ls_employee TYPE ty_employee.
-```
-
-## 📚 Control Structures
-
-```abap
-IF lv_flag = abap_true.
-  WRITE: 'Flag is true'.
-ELSE.
-  WRITE: 'Flag is false'.
-ENDIF.
-
-LOOP AT lt_data INTO DATA(ls_row).
-  WRITE: / ls_row-name.
-ENDLOOP.
-```
-
-## 🔄 Classes and Methods
-
-```abap
-CLASS zcl_example DEFINITION.
-  PUBLIC SECTION.
-    METHODS: greet.
-ENDCLASS.
-
-CLASS zcl_example IMPLEMENTATION.
-  METHOD greet.
-    WRITE: 'Hello from method!'.
-  ENDMETHOD.
-ENDCLASS.
-
-START-OF-SELECTION.
-  DATA(lo_obj) = NEW zcl_example( ).
-  lo_obj->greet( ).
-```
-
-## ✍️ Formatting: Spaces Around Brackets
-
-ABAP has **strict rules and conventions** for spaces before and after brackets:
-
-✅ Correct:
-
-```abap
+" ✅ Correct
 WRITE: |Hello { lv_name }!|.
 DATA(lo_obj) = NEW zcl_class( ).
+
+" ❌ Incorrect
+WRITE: |Hello {lv_name} !|.
+DATA(lo_obj)=NEW zcl_class().
 ```
 
-❌ Incorrect:
+> ✅ Use space inside `{ }` in string templates  
+> ✅ Use space before `(` and after `)` in method calls or constructor expressions
+
+---
+
+### ✅ Spaces in Conditions
+
+When writing logical expressions (e.g. `IF`, `WHILE`), put **spaces between operands, operators, and brackets**:
 
 ```abap
-WRITE: |Hello {lv_name} !|.       " No space inside {}
-DATA(lo_obj)=NEW zcl_class().     " No spaces around parentheses
+" ✅ Correct
+IF lv_count > 0 AND lv_flag = abap_true.
+
+" ❌ Incorrect
+IF(lv_count>0 AND lv_flag=abap_true).
 ```
+
+> ✅ Always use spaces around operators (`=`, `>`, `<`, `AND`, `OR`, etc.)  
+> ✅ Never write condition directly inside parentheses like other languages
 
 ### 📌 Rule of Thumb
 
@@ -104,13 +70,6 @@ DATA(lo_obj)=NEW zcl_class().     " No spaces around parentheses
   `method( )`, `NEW class( )`, not `method()` or `NEW class()`.
 
 Proper spacing improves readability and aligns with Clean ABAP guidelines.
-
-## ❗ Tips
-
-- Use `DATA(...)` for inline declarations.
-- Always check `SY-SUBRC` after critical operations like `SELECT`, `READ TABLE`, etc.
-- Avoid `FORM` routines in favor of classes and methods.
-- Prefer `NEW`, `VALUE`, `COND`, `SWITCH` in modern ABAP.
 
 ## 📌 Notes
 
