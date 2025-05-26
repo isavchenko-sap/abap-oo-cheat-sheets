@@ -42,8 +42,9 @@ ENDMETHOD.
 
 ### ℹ️ What is out?
 The out parameter is an instance of the system-provided interface IF_OO_ADT_CLASSRUN_OUT, which offers a method WRITE to output strings to the console in Eclipse.
-
 You can think of it as a simple abstraction over the console or log — specifically designed for ADT execution context.
+
+**Please be aware:** `out` is only available inside the `main` method of the `IF_OO_ADT_CLASSRUN` interface. It cannot be used in other methods or classes.
 
 ---
 
