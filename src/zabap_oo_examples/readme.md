@@ -21,6 +21,26 @@ Use `IF_OO_ADT_CLASSRUN` when:
 - You want to encapsulate a single-purpose process (e.g. transformation, conversion, performance test).
 - You develop standalone utilities or CLI-style jobs.
 
+### ⚠️ Important Limitation
+
+When using `IF_OO_ADT_CLASSRUN`, you **cannot use classic output statements** like:
+
+```abap
+WRITE: / 'Text', var.
+ULINE.
+SKIP.
+```
+
+Instead, use the provided out object to write output to the console:
+
+```abap
+METHOD if_oo_adt_classrun~main.
+  out->write( |Hello from ADT classrun!| ).
+ENDMETHOD.
+```
+
+This is the only supported way to print output when using IF_OO_ADT_CLASSRUN.
+
 ---
 
 ## 🔧 Included Examples
