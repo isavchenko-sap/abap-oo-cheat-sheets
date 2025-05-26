@@ -40,14 +40,6 @@ Using object-oriented design patterns in ABAP:
 
 ---
 
-## 🧩 Tip
-
-While ABAP is not Java or C#, the principles of OOP and design patterns are just as relevant — especially in **modern ABAP on SAP BTP** or **clean core S/4HANA** development.
-
-> Patterns like Factory, Singleton, and Composite are often used in frameworks like RAP, BOPF, and classic OO-based business logic.
-
----
-
 ## 📌 Credits
 
 Based on [SAP-samples/abap-oo-basics](https://github.com/SAP-samples/abap-oo-basics), this folder is refactored for clarity and reusability in enterprise SAP projects.
