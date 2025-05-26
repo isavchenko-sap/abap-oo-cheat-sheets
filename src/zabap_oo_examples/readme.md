@@ -29,6 +29,7 @@ When using `IF_OO_ADT_CLASSRUN`, you **cannot use classic output statements** li
 WRITE: / 'Text', var.
 ULINE.
 SKIP.
+cl_demo_output=>display( data )
 ```
 
 Instead, use the provided out object to write output to the console:
